@@ -1,229 +1,201 @@
 /* ==================================================
-*	01 - media screen and (max-width: 991px)
-*	02 - media screen and (max-width: 767px)
-*	03 - media screen and (max-width: 575px)
-*	04 - media screen and (max-width: 410px)
-*	05 - media screen and (max-width: 380px)
-*	06 - media screen and (max-width: 320px)
+*   01 - media screen and (max-width: 1400px)
+*   02 - media screen and (max-width: 1200px)
+*	03 - media screen and (max-width: 992px)
+*	04 - media screen and (max-width: 768px)
+*	05 - media screen and (max-width: 576px)
+*	06 - media screen and (max-width: 480px)
+*	07 - media screen and (max-width: 360px)
+*	08 - media screen and (max-width: 320px)
 *   XX-Large devices (larger desktops)
 *   No media query since the xxl breakpoint has no upper bound on its width
 ================================================== */
-// media screen and (max-width: 992px)
-@media screen and(max-width: 991.98px){
-    .question_title{
-        h1{
-            font-size: 3rem;
-            padding: 2rem 3rem;
-            font-weight: 600;
-        }
-    }
+// 01 - media screen and (max-width: 1400px)
+@media screen and(max-width: 1399.98px){
     .question_number{
-        margin-top: 4.2rem;
-        span{
-            font-size: 0.8rem;
-            font-weight: 500;
-        }
+        font-size: 1.2rem;
+        font-weight: 600;
     }
-    .form_items {
-        label {
-            margin-top: 0.8rem;
-            font-size: 1rem;
+    .question_content{
+        &:before{
+            top: -25%;
+            right: 8%;
+            font-size: 13rem;
             font-weight: 700;
-            &:after {
-                width: 2.1rem;
-                height: 2.1rem;
-                left: 12px;
-            }
-            &:before {
-                left: 19px;
-                font-size: 1.2625rem;
-            }
         }
-        .error + .error{
-            left: 146px;
+        h1{
+            font-size: 2.5rem;
+            padding: 2rem 1.1rem;
         }
     }
-    .next_btn{
+    .f_btn{
         font-size: 1rem;
-        font-weight: 600;
-        padding: 0.64375rem 3rem;
-    }
-    .prev_btn{
-        font-size: 1rem;
-        font-weight: 600;
+        padding: .5rem 2rem;
     }
 }
-// media screen and (max-width: 768px)
-@media screen and(max-width: 767.98px){
-    .count_clock{
-        display: none;
-        padding-right: 3rem!important;
+// 02 - media screen and (max-width: 1200px)
+@media screen and(max-width: 1199.98px){
+    .form_content{
+        height: 47rem;
     }
-    .multisteps_form{
-        max-width: 56rem;
-        min-height: 34rem;
-        margin: 2.5rem auto;
-        background-size: 100% 30%, 100% 18%;
+    .question_number{
+        font-size: 1rem;
+        font-weight: 500;
     }
-    .question_title{
+    .question_content{
+        &:before{
+            top: -20%;
+            font-size: 10rem;
+            font-weight: 600;
+        }
         h1{
             font-size: 2rem;
-            padding: 1rem 1.5rem;
-            font-weight: 500;
-            margin-top: 2rem;
+            padding: 1.5rem 1rem;
         }
     }
-    .question_number{
-        margin-top: 0rem;
-        span{
-            font-size: 0.6rem;
-            font-weight: 500;
-        }
-    }
-    .form_items {
-        label {
-            margin-top: 0.6rem;
-            font-size: 0.8rem;
-            font-weight: 600;
-            &:after {
-                width: 1.9rem;
-                height: 1.9rem;
-                left: 10px;
-            }
-            &:before {
-                left: 16px;
-                font-size: 1.1625rem;
-            }
-        }
-        .error + .error{
-            top: -242%;
-            left: 46px;
-        }
-    }
-    .next_btn{
-        font-size: 1rem;
-        font-weight: 600;
-        padding: 0.64375rem 3rem;
-    }
-    .prev_btn{
-        font-size: 1rem;
-        font-weight: 600;
-    }
-}
-// media screen and (max-width: 576px)
-@media screen and(max-width: 575.98px){
-    .logo_area{
-        text-align: center;
-        padding-left: 0rem!important;
-    }
-    .multisteps_form{
-        max-width: 52rem;
-        min-height: 31rem;
-        margin: 2.5rem auto;
-        background-size: 100% 28%, 100% 15%;
-    }
-    .question_title{
-        h1{
-            font-size: 1.7rem;
-            margin-top: 1rem;
-        }
-    }
-    .form_items {
-        label {
+    .form_items{
+        label{
+            font-size: 1rem;
+            padding: .6rem 0rem;
             padding-left: 3.5rem;
-            margin-top: 0.4rem;
-            font-weight: 500;
-            &:after {
-                width: 1.6rem;
-                height: 1.6rem;
-                left: 10px;
+            &:before{
+                content: '';
+                width: 2rem;
+                height: 2rem;
+                left: 12px;
             }
-            &:before {
-                left: 15px;
-                font-size: 1rem;
+            span{
+                left: 23px;
             }
         }
-        .error + .error{
-            left: 40%;
-        }
-    }
-    .next_btn{
-        font-size: 0.8rem;
-        font-weight: 500;
-        padding: 0.44375rem 2rem;
     }
     .prev_btn{
-        font-size: 0.8rem;
-        font-weight: 500;
+        left: 90px;
+        bottom: 30px;
+    }
+    .next_btn{
+        right: 110px;
+        bottom: 30px;
     }
 }
-// media screen and (max-width: 410px)
-@media screen and(max-width: 409.98px){
-    .multisteps_form{
-        min-height: 28rem;
-        background-size: 100% 28%, 100% 15%;
+// 03 - media screen and (max-width: 992px)
+@media screen and(max-width: 991.98px){
+    .form_content{
+        height: 42rem;
     }
-    .question_title{
+    .question_content{
+        &:before{
+            top: -18%;
+            right: 10%;
+            font-size: 7rem;
+            font-weight: 500;
+        }
         h1{
             font-size: 1.5rem;
+            padding: 1rem;
         }
     }
-    .form_items {
-        label {
+    .form_items{
+        label{
+            font-size: 1rem;
+            padding: .6rem 0rem;
             padding-left: 3.5rem;
-            margin-top: 0.2rem;
-            &:after {
-                width: 1.4rem;
-                height: 1.4rem;
-                left: 10px;
-            }
-            &:before {
-                left: 16px;
-                font-size: 0.7rem;
+            &:before{
+                content: '';
+                width: 2rem;
+                height: 2rem;
+                left: 12px;
             }
         }
-    }
-    .next_btn{
-        font-size: 0.6rem;
+        .error{
+            left: 90%;
+        }
     }
     .prev_btn{
-        font-size: 0.6rem;
+        left: 25px;
+    }
+    .next_btn{
+        right: 45px;
+    }
+    .step_progress{
+        top: 30%;
+        left: 170px;
     }
 }
-// media screen and (max-width: 380px)
-@media screen and(max-width: 379.98px){
-    .multisteps_form{
-        min-height: 28rem;
-        background-size: 100% 25%, 100% 15%;
+// 04 - media screen and (max-width: 768px)
+@media screen and(max-width: 767.98px){
+    .wrapper{
+        min-height: 100vh;
     }
-    .question_title{
-        h1{
-            font-size: 1rem;
-        }
+    .logo_area{
+        text-align: center;
+        display: block;
+        margin-left: 0rem!important;
+        margin-bottom: 2rem;
+    }
+    .count_clock{
+        display: none;
+    }
+    .form_content{
+        width: 60%;
+    }
+    .step_progress{
+        display: none;
+    }
+    .prev_btn{
+        left: 0px;
+        bottom: 30px;
+        padding: .5rem 1rem;
+    }
+    .next_btn{
+        right: 20px;
+        bottom: 30px;
+        padding: .5rem 1rem;
     }
 }
-// media screen and (max-width: 320px)
-@media screen and(max-width: 319.98px){
+// 05 - media screen and (max-width: 576px)
+@media screen and(max-width: 575.98px){
     .multisteps_form{
-        min-height: 28rem;
-        background-size: 100% 25%, 100% 15%;
+        height: 750px!important;
     }
-    .question_title{
-        h1{
-            font-size: 1rem;
-        }
-    }
-    .form_items {
-        label {
+    .form_items{
+        label{
+            font-size: 0.7rem;
+            padding: .6rem 0rem;
             padding-left: 3rem;
-            font-size: 0.5rem;
-            &:after {
-                width: 1.3rem;
-                height: 1.3rem;
+            &:before{
+                width: 1.5rem;
+                height: 1.5rem;
+                left: 10px;
             }
-            &:before {
+            span{
+                left: 18px;
                 font-size: 0.6rem;
             }
         }
     }
+    .prev_btn{
+        left: 100px;
+    }
+    .next_btn{
+        right: 100px;
+    }
 }
+// 05 - media screen and (max-width: 480px)
+@media screen and(max-width: 479.98px){
+    .question_content{
+        h1{
+            font-size: 1rem;
+        }
+    }
+    .form_items{
+        .error{
+            left: 115%;
+        }
+    }
+    .progress{
+        display: none;
+    }
+}
+
+

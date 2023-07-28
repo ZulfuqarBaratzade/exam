@@ -9,7 +9,6 @@ a,
 button,
 input {
   cursor: pointer;
-  display: inline-block;
   text-decoration: none;
   &:hover {
     text-decoration: none;
@@ -22,62 +21,36 @@ h1,h2,h3,h4,h5,h6 {
   font-weight: 700;
 }
 img {
-  height: auto;
   max-width: 100%;
+  height: auto;
 }
 
+/* transition - start
+================================================== */
+a,
+button {
+  transition: $default_transition;
+}
+/* transition - end
+================================================== */
 // dark version start ==================
 .dark-version.dark-version {
   background-color: $color-blackis;
-  color: $white;
-  p,
-  label {
-    color: $white!important;
-  }
   button,
   input,
   select,
   textarea,
   label
   {
-    color: $black!important;
-    background-color: $white!important;
-  }
-  h1{
-    color: $white!important;
-    background-color: $black!important;
+      color: $white!important;
+      background-color: $black!important;
   }
 }
 
-
-@keyframes upDown {
-  // animation: upDown 1s infinite alternate;
-  0% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(-10px);
-  }
+// =================== Fixed step =========================
+.step_area_fixed{
+  position: fixed;
 }
-
-@keyframes rightLeft {
-  // animation: rightLeft 1s infinite alternate;
-  0% {
-    transform: translateX(15px);
-  }
-  100% {
-    transform: translateX(-15px);
-  }
-}
-/* css animations - end
-================================================== */
-
-/* transition - start ============================= */
-a,
-button {
-  transition: $default_transition;
-}
-/* transition - end ======================= */
 // Custom animation delay ==============
 .animate_25ms{
   animation-delay: 25ms;
