@@ -183,7 +183,7 @@ Author      : jthemes (https://themeforest.net/user/jthemes)
 .form_content {
   width: 80%;
   min-height: 100%;
-  background-image: url("../images/bg-img/bg-2.png");
+  background-image: url("/images/bg-img/bg-2.png");
   background-repeat: no-repeat;
   border-radius: 0.5rem;
   margin: auto;
