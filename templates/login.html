@@ -52,9 +52,9 @@
                 <h2 class="text-center text-dark mt-5">Welcome to Western Future Full Stack Development 2023-2024 Scholarship </h2>
                 <div class="text-center mb-5 text-dark">please type your login and password and start exam </div>
                 <div class="card my-5">
-
-                    <form class="card-body cardbody-color p-lg-5">
-
+                    
+                    <form class="card-body cardbody-color p-lg-5" method="post">
+                        {% csrf_token %}    
                         <div class="text-center">
                             <img src="{% get_media_prefix %}images/logo/blank_profile_image.png"
                                 class="img-fluid profile-image-pic img-thumbnail rounded-circle my-3" width="200px"
@@ -63,13 +63,13 @@
 
                         <div class="mb-3">
                             <input type="text" class="form-control" id="Username" aria-describedby="emailHelp"
-                                placeholder="User Name">
+                                placeholder="User Name" for=""username>
                         </div>
                         <div class="mb-3">
-                            <input type="password" class="form-control" id="password" placeholder="password">
+                            <input for="password" type="password" class="form-control" id="password" placeholder="password">
                         </div>
                         <div class="text-center"><button type="submit"
-                                class="btn btn-color px-5 mb-5 w-100">Login</button></div>
+                                class="btn btn-color px-5 mb-5 w-100" value= "Login">Login</button></div>
                     </form>
                 </div>
 
@@ -84,4 +84,5 @@
     <!-- jQuery-validate-js include -->
     <script src="{% static 'js/jquery.validate.min.js' %}"></script>
     <script src="{% static 'js/script.js' %}"></script>
-</body>
+</body> 
+</html>
