@@ -1,15 +1,20 @@
-from django.shortcuts import render, redirect
-from django.contrib.auth import authenticate, login
-from .models import Login_User
-def login(request):
-    if request.method == 'POST':
-        username = request.POST.get('Username')
-        password = request.POST.get('Password')
-        login_user = Login_User()
-        if login_user.username == username and login_user.password == password:
-            return redirect('index')
+from django.shortcuts import render,redirect
+from django.contrib.auth import authenticate,login
+# Create your views here.
+def login_request(request):
+    if request.method == "POST":
+        username = request.POST["username"]
+        password = request.POST["password"]
+        user = authenticate(request,username = username , password = password)
+        if user is not None:
+            login(request,user)
+            return redirect("index")
         else:
-            # Handle invalid login credentials here (e.g., show an error message)
-            pass
+            return render(request,"login.html",{
+                "error":"Try again"
+            })
+    return render(request,'login.html')
 
-    return render(request, 'login.html')
+
+def index(request):
+    return render(request,'index.html')

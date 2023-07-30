@@ -60,16 +60,22 @@
                                 class="img-fluid profile-image-pic img-thumbnail rounded-circle my-3" width="200px"
                                 alt="profile">
                         </div>
-
+                        {% if error %}
+                            <div class="alert alert-danger">
+                                {{error}}
+        
+                            </div>
+                        {% endif %}
                         <div class="mb-3">
-                            <input type="text" class="form-control" id="Username" aria-describedby="emailHelp"
-                                placeholder="User Name" for=""username>
+                            <label for="username" class="form-label">Username</label>
+                            <input type="text" class="form-control" name="username">
                         </div>
                         <div class="mb-3">
-                            <input for="password" type="password" class="form-control" id="password" placeholder="password">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" name="password">
+                            <div class="mb-3"></div>
+                            <input type="submit" value="Login" class="btn btn-primary">
                         </div>
-                        <div class="text-center"><button type="submit"
-                                class="btn btn-color px-5 mb-5 w-100" value= "Login">Login</button></div>
                     </form>
                 </div>
 
