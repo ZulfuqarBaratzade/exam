@@ -44,8 +44,8 @@
                 <div class="form_content">
                    <!-- Form-header-content -->
                    <div class="form_header_content text-left pt-4">
-                      <img src="{% get_media_prefix %}images/logo/profile.jpg" style="width: 10%;border-radius: 40px; margin-left: 15%;">
-                      <span style="margin-left: 10%;">Hi,{{ user.get_full_name }} Good Luck ☺</span>
+                      <img src="{{ user.profile.image.url }}" style="width: 10%;border-radius: 40px; margin-left: 15%;">
+                     <span style="margin-left: 10%;">Hi,{{ user.get_full_name }} Good Luck ☺</span>
                    </div>
                    <span class="question_number text-uppercase mb-3 float-end">QUESTION 1/4</span>
                    <div class="progress rounded-pill">
@@ -71,7 +71,7 @@
                             <li>
                                <label for="opt_3" class="step_1 ps-5 rounded-pill animate__animated animate__fadeInRight animate_150ms">
                                   Personally Quizzes
-                                  <input type="radio" id="opt_3" name="stp_1_select_option" value="Personally Quizzes">
+                                  <input type="radio" id="opt_3" name="stp_1_select_option" value="Personally Qgit branch -auizzes">
                                </label>
                             </li>
                             <li>
