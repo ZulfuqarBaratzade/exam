@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Western Future</title>
+    <link rel="icon" href="{% get_media_prefix %}images/logo/favicon.ico">
+    <!-- FontAwesome-cdn include -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Google fonts include -->
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <!-- Bootstrap-css include -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <!-- Animate-css include -->
+    <link rel="stylesheet" href="{% static 'css/animate.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <style>
+        body{
+            background-color: #e9e9e9;
+        }
+        .btn-color {
+            background-color: #0e1c36;
+            color: #fff;
+    
+        }
+    
+        .profile-image-pic {
+            height: 200px;
+            width: 200px;
+            object-fit: cover;
+        }
+    
+    
+    
+        .cardbody-color {
+            background-color: #ebf2fa;
+        }
+    
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                
+                <div class="form_header_content text-left pt-4">
+                    <img src="{{ user.profile.image.url }}" style="width: 10%;border-radius: 40px; margin-left: 15%;">
+                   <span style="margin-left: 10%;">Hi,{{ user.get_full_name }} Good Luck ☺ if you are ready, you can click the start button and start exam</span>
+                 </div>
+                <a href="{{  }}"><img src="{% get_media_prefix %}images/logo/power_1.png"></a>
+
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
+    <!-- Countdown-js include -->
+    <script src="{% static 'js/countdown.js' %}"></script>
+    <!-- Bootstrap-js include -->
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <!-- jQuery-validate-js include -->
+    <script src="{% static 'js/jquery.validate.min.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+</body> 
+</html>

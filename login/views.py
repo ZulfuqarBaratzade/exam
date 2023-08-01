@@ -16,5 +16,9 @@ def login_request(request):
     return render(request,'login.html')
 
 
+
+def start_button(request):
+    return render(request,'startbutton.html')
+
 def index(request):
     return render(request,'index.html')
