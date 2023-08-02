@@ -8,7 +8,7 @@ def login_request(request):
         user = authenticate(request,username = username , password = password)
         if user is not None:
             login(request,user)
-            return redirect("index")
+            return redirect("start_button")
         else:
             return render(request,"login.html",{
                 "error":"Try again"
