@@ -45,22 +45,67 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 offset-md-3">
-                
-                <div class="form_header_content text-left pt-4">
-                    <img src="{{ user.profile.image.url }}" style="width: 10%;border-radius: 40px; margin-left: 15%;">
-                    <span style="margin-left: 10%;">Hi,{{ user.get_full_name }} </span>
-                    <br><br>
-                    <p style="margin-left: 8%;">If you are ready exam, you can click the start button. Good Luck ☺ </p>
-                 </div>
-                 <br><br>
-                 <a href="{% url 'index' %}"><img src="{% get_media_prefix %}images/logo/power_1.png" style="margin-left: 10%;"></a>
 
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel"><span>Salam,{{ user.get_full_name }} </span><img src="{{ user.profile.image.url }}" style="width: 10%;border-radius: 40px; margin-left: 15%;"></h1>
+                </div>
+                <div class="modal-body">
+                    <h2> İmtahan şərtləri </h2>
+                    <p>İmtahan 4 fəndən ibarətdir:</p>
+                    <ul>
+                        <li>İQ</li>
+                        <li>Riyazi Məntiq</li>
+                        <li>Texnologiya</li>
+                        <li>İngilis dili</li>
+                    </ul>
+                    <h6>İmtahan(fasiləsiz) 120 dəqiqədir.</h6>
+                    <h6>İmtahan 100 sualdan ibarətdir.</h6>
+                    <ul>
+                        <li>Riyazi Məntiq - 10 bal</li>
+                        <li> İQ - 10 bal</li>
+                        <li> Texnologiya - 5 bal </li>
+                        <li> İngilis dili - 5 bal </li>
+                    </ul>
+                    <h6>İmtahan 4 variantlıdır.</h6>
+                    <h6>imtahana telefon və yaxud hər hansı bir cihazla daxil olunması qadağandır!</h6>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="statementexam" required>
+                        <label class="form-check-label" for="defaultCheck1">
+                            İmtahan şərtlərini oxudum, razıyam və imtahana hazıram
+                        </label>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary btn-lg active" role="button" aria-pressed="true" onclick="startExam()">Start</button>
+                </div>
             </div>
         </div>
     </div>
+    <script>
+        function startExam() {
+            var checkbox = document.getElementById('statementexam');
+            
+            if (checkbox.checked) {
+                window.location.href = "{% url 'index' %}"; // Doğrulama başarılı, sayfayı yönlendir.
+            } else {
+                alert("İmtahan şərtlərini qəbul etmək üçün checkboxu işarələyin."); // Doğrulama başarısız, uyarı mesajı göster.
+            }
+        }
+    </script>
+  
+    <script type="text/javascript">
+        window.onload = function () {
+            OpenBootstrapPopup();
+        };
+        function OpenBootstrapPopup() {
+            $("#exampleModal").modal('show');
+        }
+    </script>
     <script src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
     <!-- Countdown-js include -->
     <script src="{% static 'js/countdown.js' %}"></script>
@@ -71,3 +116,4 @@
     <script src="{% static 'js/script.js' %}"></script>
 </body> 
 </html>
+
