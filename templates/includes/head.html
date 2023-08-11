@@ -1,10 +1,9 @@
 {% load static %}
-{% block head %}
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    
+    <title>Western Future</title>
+    <link rel="icon" href="{% get_media_prefix %}images/logo/favicon.ico">
     <!-- FontAwesome-cdn include -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <!-- Google fonts include -->
@@ -14,20 +13,4 @@
     <!-- Animate-css include -->
     <link rel="stylesheet" href="{% static 'css/animate.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
- </head>
-{% endblock head %}
-{% block title %} <title>Western Future</title> <link rel="icon" href="{% get_media_prefix %}images/logo/favicon.ico">{% endblock title%}
-
-{% block content %}
-
-{% endblock content %}
-{% block scripts %}
-{% endblock scripts%}
-<script src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
-<!-- Countdown-js include -->
-<script src="{% static 'js/countdown.js' %}"></script>
-<!-- Bootstrap-js include -->
-<script src="{% static 'js/bootstrap.min.js' %}"></script>
-<!-- jQuery-validate-js include -->
-<script src="{% static 'js/jquery.validate.min.js' %}"></script>
-<script src="{% static 'js/script.js' %}"></script>
+</head>
