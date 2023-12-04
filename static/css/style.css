@@ -1,0 +1,44 @@
+body{
+    background: whitesmoke;
+}
+#profile_size{
+    position: absolute;
+    top: 0;
+    width: 120px;
+    margin-left: 50px;
+    display: flex;
+    justify-content: space-between;
+
+}
+#profile_size p{
+    font-weight: bold;
+    margin: 40% 0 0 10% ;
+    display: flex;
+
+    
+
+}
+.heading{
+    position: relative;
+    text-align: center;
+    height: 200px;
+    margin-top: 15px;
+    background: 
+}
+.form-group{
+    padding: 20px;
+}
+#submitButton{
+    position: relative;
+    left: 90%;
+    width: 400px;
+    padding: 10px;
+    background-color: whitesmoke;
+    border: none;
+    color: gray;
+    transition: background 2s;
+}
+#submitButton:hover{
+    background-color: blue;
+    color: whitesmoke;
+}

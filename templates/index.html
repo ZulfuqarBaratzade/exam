@@ -2,5 +2,102 @@
 {% load static %}
 
 {% block content %}
-<h1>Hello Guys </h1>
+
+
+
+<div class="text-center" id="profile_size">
+  <img src="{{ user.profile.image.url }}" class="img-fluid profile-image-pic img-thumbnail rounded-circle my-3" width="200px" alt="profile">
+      <p>{{ user.get_full_name }} </p>
+</div>
+<div class="heading">
+  <h1> IT Essential Final Exam </h1>
+    <p> Kecid bali > 80 %</p>
+  
+</div>
+<hr>
+<div class="container mt-5">
+  <form>
+      <div class="form-group">
+          <label for="question1">Question 1: What is the capital of France?</label>
+          <div class="form-check">
+              <input type="radio" class="form-check-input" id="q1Option1" name="question1" value="Paris">
+              <label class="form-check-label" for="q1Option1">Paris</label>
+          </div>
+          <div class="form-check">
+              <input type="radio" class="form-check-input" id="q1Option2" name="question1" value="Berlin">
+              <label class="form-check-label" for="q1Option2">Berlin</label>
+          </div>
+          <div class="form-check">
+              <input type="radio" class="form-check-input" id="q1Option3" name="question1" value="London">
+              <label class="form-check-label" for="q1Option3">London</label>
+          </div>
+      </div>
+
+      <div class="form-group">
+          <label for="question2">Question 2: What is the largest mammal?</label>
+          <div class="form-check">
+              <input type="radio" class="form-check-input" id="q2Option1" name="question2" value="Elephant">
+              <label class="form-check-label" for="q2Option1">Elephant</label>
+          </div>
+          <div class="form-check">
+              <input type="radio" class="form-check-input" id="q2Option2" name="question2" value="Blue Whale">
+              <label class="form-check-label" for="q2Option2">Blue Whale</label>
+          </div>
+          <div class="form-check">
+              <input type="radio" class="form-check-input" id="q2Option3" name="question2" value="Giraffe">
+              <label class="form-check-label" for="q2Option3">Giraffe</label>
+          </div>
+      </div>
+
+      <div class="form-group">
+        <label for="question2">Question 2: What is the largest mammal?</label>
+        <div class="form-check">
+            <input type="radio" class="form-check-input" id="q2Option1" name="question2" value="Elephant">
+            <label class="form-check-label" for="q2Option1">Elephant</label>
+        </div>
+        <div class="form-check">
+            <input type="radio" class="form-check-input" id="q2Option2" name="question2" value="Blue Whale">
+            <label class="form-check-label" for="q2Option2">Blue Whale</label>
+        </div>
+        <div class="form-check">
+            <input type="radio" class="form-check-input" id="q2Option3" name="question2" value="Giraffe">
+            <label class="form-check-label" for="q2Option3">Giraffe</label>
+        </div>
+    </div>
+
+    <div class="form-group">
+      <label for="question2">Question 2: What is the largest mammal?</label>
+      <div class="form-check">
+          <input type="radio" class="form-check-input" id="q2Option1" name="question2" value="Elephant">
+          <label class="form-check-label" for="q2Option1">Elephant</label>
+      </div>
+      <div class="form-check">
+          <input type="radio" class="form-check-input" id="q2Option2" name="question2" value="Blue Whale">
+          <label class="form-check-label" for="q2Option2">Blue Whale</label>
+      </div>
+      <div class="form-check">
+          <input type="radio" class="form-check-input" id="q2Option3" name="question2" value="Giraffe">
+          <label class="form-check-label" for="q2Option3">Giraffe</label>
+      </div>
+  </div>
+
+  <div class="form-group">
+    <label for="question2">Question 2: What is the largest mammal?</label>
+    <div class="form-check">
+        <input type="radio" class="form-check-input" id="q2Option1" name="question2" value="Elephant">
+        <label class="form-check-label" for="q2Option1">Elephant</label>
+    </div>
+    <div class="form-check">
+        <input type="radio" class="form-check-input" id="q2Option2" name="question2" value="Blue Whale">
+        <label class="form-check-label" for="q2Option2">Blue Whale</label>
+    </div>
+    <div class="form-check">
+        <input type="radio" class="form-check-input" id="q2Option3" name="question2" value="Giraffe">
+        <label class="form-check-label" for="q2Option3">Giraffe</label>
+    </div>
+</div>
+
+      <button type="submit" class="btn btn-primary" id="submitButton">Submit</button>
+  </form>
+</div>
 {% endblock %}
