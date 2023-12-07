@@ -11,9 +11,10 @@
 </div>
 <div class="heading">
   <h1> IT Essential Final Exam </h1>
-    <p> Kecid bali > 80 %</p>
+  <p> Kecid bali > 80 %</p>
   
 </div>
+<div id="timer">90:00</div>
 <hr>
 <div class="container mt-5">
   <form>
@@ -100,4 +101,36 @@
       <button type="submit" class="btn btn-primary" id="submitButton">Submit</button>
   </form>
 </div>
+{% endblock %}
+{% block script %}
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var timerElement = document.getElementById('timer');
+        var minutes = 90;
+        var seconds = 0;
+
+        function updateTimer() {
+            timerElement.textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+        }
+
+        function countdown() {
+            if (minutes === 0 && seconds === 0) {
+                clearInterval(timerInterval);
+                alert('Time is up!');
+            } else {
+                if (seconds === 0) {
+                    minutes--;
+                    seconds = 59;
+                } else {
+                    seconds--;
+                }
+                updateTimer();
+            }
+        }
+
+        updateTimer(); // Initial display
+
+        var timerInterval = setInterval(countdown, 1000);
+    });
+</script>
 {% endblock %}

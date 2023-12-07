@@ -20,5 +20,5 @@ def login_request(request):
 def start_button(request):
     return render(request,'startbutton.html')
 
-def index(request):
-    return render(request,'index.html')
+# def index(request):
+#     return render(request,'index.html')

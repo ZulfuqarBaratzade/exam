@@ -23,7 +23,6 @@ body{
     text-align: center;
     height: 200px;
     margin-top: 15px;
-    background: 
 }
 .form-group{
     padding: 20px;
@@ -41,4 +40,12 @@ body{
 #submitButton:hover{
     background-color: blue;
     color: whitesmoke;
+}
+#timer {
+    position: absolute;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    left: 90%;
+    font-size: 25px;
+    top: 2%;
 }
